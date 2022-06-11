@@ -101,6 +101,9 @@ input {
     text-align: center;
 }
 
-
-
-
+ a {
+    text-decoration: none;
+}
+.img-radius {
+    border-radius: 50% ;
+}
