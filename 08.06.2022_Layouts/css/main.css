@@ -1,0 +1,50 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    padding: 0;
+}
+#wrapper, #header{
+    background-color: black;
+    height: 100px;
+    width: auto;
+}
+#main{
+    background-color: aquamarine;
+    height: 100px;
+}
+#main #left, #main #right{
+    width: 30%;
+    background-color: red;
+    height: 50px;
+}
+#main #left{
+    float: left;
+}
+#main #right{
+    float: left;
+}
+#main #content{
+    width: 40%;
+    background-color: gray;
+    min-height: 50px;
+    float: left;
+}
+#footer{
+    background-color: blueviolet;
+    height: 100px;
+}
+
+#header p, #footer p{
+    color: chartreuse;
+}
+p{
+    font-size: 24pt;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-italic{
+    font-style: italic;
+}
