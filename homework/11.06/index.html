@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("button").mouseover(function(){
+                $("#click").css("background-color", "black");
+            });
+            $("button").mouseout(function(){
+                $("#click").css("background-color", "gray");
+            });
+            $("button").click(function(){
+                $("#paraphrase").css("visibility", "hidden");
+            });
+            $("button").dblclick(function(){
+                $("#paraphrase").css("visibility", "visible");
+            });
+        });
+    </script>
+</head>
+        
+<body>
+    <div id="root">
+        <div id="paraphrase">
+            <img src="./Image/pexels-jonathan-petersson-1237119.jpg" alt="" width="500px" height="300px">
+        </div>
+        <button id="click">Click me</button>
+        <div class="list">
+            <ul>
+                <li>GUIDE</li>
+                <li>Click once will hide</li>
+                <li>Click twice will show</li>
+            </ul>
+        </div>
+        </div>
+</body>
+</html>
