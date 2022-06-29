@@ -4,46 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <script src="jquery-3.6.0.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <title>TRANG CHỦ</title>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            <img src="./image/logo.gif" class="logo-header" alt="logo-header" width="150px" height="75px">
-            <ul>
-                <a href=""><li class="list-header">TƯ VẤN SẢN PHẨM</li></a>
-                <a href=""><li class="list-header">LIÊN HỆ</li></a>
-                <a href=""><li class="list-header">SITEMAP</li></a>
-                <a href=""><li class="list-header">TIN TỨC</li></a>
-                <a href=""><li class="list-header">SẢN PHẨM</li></a>
-                <a href=""><li class="list-header">GIỚI THIỆU</li></a>
-                <a href=""><li class="list-header">TRANG CHỦ</li></a>
-            </ul>
+            <div class="logo-header">
+                <a href="./index.html">
+                    <img src="./image/logo.gif" alt="">
+                </a>
+            </div>
+            <div class="menu-header">
+                <li><a href="./index.html">TRANG CHỦ</a></li>
+                <li><a href="./modules/introduce.html">GIỚI THIỆU</a></li>
+                <li><a href="">SẢN PHẨM</a></li>
+                <li><a href="">TIN TỨC</a></li>
+                <li><a href="">SITEMAP</a></li>
+                <li><a href="">LIÊN HỆ</a></li>
+                <li><a href="">TƯ VẤN SẢN PHẨM</a></li>
+            </div>
         </div>
         <div id="main">
+            <div id="slider-first">
+                <img class="slider" src="/image/slider1.jpg" alt="">
+                <img class="slider" src="./image/slider2.jpg" alt="">
+                <img class="slider" src="./image/slider3.jpg" alt="">
+                <!-- <button class="button-slider-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="button-slider-right" onclick="plusDivs(-1)">&#10095;</button> -->
+            </div>
+            <!-- <div class="dot-slider-first">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div> -->
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slider");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                }
+            </script>
             <div id="content">
-                <p class="content-title">DANH MỤC SẢN PHẨM</p>
-                <div id="content-product">
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    <img src="" class="" alt="" width="262px" height="196.7px">
-                    
-                    <p>4</p>
-                    <p>5</p>
-                    <p>6</p>
+                <div id="list-product">
+                    <p class="title-product">DANH MỤC SẢN PHẨM</p>
+                        <div class="product"><img src="./image/1x.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/1x.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/g_thep-chuv.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/g_thep-chuv.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/g_valves.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/g_valves.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/1x.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/1x.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                        <div class="product"><img src="./image/1x.jpg" alt="" width="262" height="196.7"><h3>Tên sản phẩm</h3></div>
+                </div>
+                <div id="list-other">
+                    <div id="product-other">  
+                        <ul>
+                            <li class="title-list-other">THIẾT BỊ ĐIỆN TỬ</li>
+                            <li class="content-list-other"><a href=""> Đèn LED công nghiệp</a></li>
+                            <li class="content-list-other"><a href=""> Đèn T5 tiết kiệm điện</a></li>
+                            <li class="content-list-other"><a href=""> Thiết bị điện</a></li>
+                            <li class="title-list-other">THIẾT BỊ CƠ KHÍ</li>
+                            <li class="content-list-other"><a href="">  Phụ kiện đường ống</a></li>
+                            <li class="content-list-other"><a href=""> Ống thép công nghiệp</a></li>
+                            <li class="content-list-other"><a href=""> Tấm, V, Láp</a></li>
+                            <li class="content-list-other"><a href=""> Phụ kiện áp lực</a></li>
+                            <li class="content-list-other"><a href=""> Van công nghiệp</a></li>
+                            <li class="content-list-other"><a href=""> Thiết bị đo công nghiệp</a></li>
+                            <li class="content-list-other"><a href=""> Khớp nối & Thiết bị làm kín</a></li>
+                        </ul>
+                    </div>
+                    <div id="contactInfo-other">
+                        <p div class="title-contactInfo-other">THÔNG TIN LIÊN HỆ</p>
+                        <div id="content-contactInfo-other">
+                            <img class="icon-hotline" src="./image/chat.png" alt="" width="36" height="24">
+                            <p class="hotline">Hotline</p>
+                            <p class="numberPhone-hotline">0968 999 945</p>
+                            <div class="number-contactInfo-other">
+                                <img class="img-numberPhonne" src="./image/phone.png" alt="" width="36" height="24">
+                                <ul>
+                                    <li>(028) 222 34 456</li>
+                                    <li>(028) 38 949 892</li>
+                                </ul>
+                                <p class="fax">Fax:</p>
+                                <p>: 1233445(028) 38 949 943</p>
+                            </div>
+                            <div class="address">
+                                <img class="icon-address" src="./image/email.png" alt="" width="36" height="24">
+                                <p class="web-address"><a href="">info@dienconhatquang.vn</a></p>
+                                <p class="gmail-address"><a href="">liennhatquang09@gmail.com</a></p>
+                                <div class="logo-spyke">
+                                    <img src="./image/skype.gif" alt="" width="78" height="30">
+                                </div>
+                            </div>
+                            <div id="statistical">
+                                <p div class="title-statistical-other">THỐNG KÊ</p>
+                                    <div id="title-statistical">
+                                        <p class="title-content-statistical">» Trực tuyến</p>
+                                        <p class="title-content-statistical">» Hôm nay</p>
+                                        <p class="title-content-statistical">» Hôm qua</p>
+                                        <p class="title-content-statistical">» Tuần qua</p>
+                                        <p class="title-content-statistical">» Tổng cộng</p>
+                                    </div>
+                                    <div id="content-statistical">    
+                                        <p class="content-statistical">: 1</p>
+                                        <p class="content-statistical">: 7</p>
+                                        <p class="content-statistical">: 22</p>
+                                        <p class="content-statistical">: 7</p>
+                                        <p class="content-statistical">: 194247</p>
+                                    </div>                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div id="facebook-other">
+                    <p class="guide">Tìm chúng tôi trên Facebook</p>
+                    <img class="logoCty-facebook-other" src="./image/logo.gif" alt="" width="54" height="54">
                 </div>
             </div>
-            <div id="aside">
-
-            </div>
+        </div>
+        <div id="footer">
+            <p class="top-footer">Copyright © Công Ty TNHH TMDV Điện Cơ Nhật Quang – VPGD: 730/7/11 Lê Đức Thọ, P.15, Q.GV, TP.HCM - Website:www.DienCoNhatQuang.vn</p>
+            <p class="bottom-footer">Designer & development by <a href="https://www.facebook.com/jmiphan">Thanh Vinh</a></p> 
         </div>
     </div>
 </body>
